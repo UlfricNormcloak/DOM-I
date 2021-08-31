@@ -49,6 +49,29 @@ document.querySelector('nav a:nth-of-type(4)').textContent = siteContent['nav'][
 document.querySelector('nav a:nth-of-type(5)').textContent = siteContent['nav']['nav-item-5'];
 document.querySelector('nav a:nth-of-type(6)').textContent = siteContent['nav']['nav-item-6'];
 
+//added elements, events, and style changes//
+const newNavItem1 = document.createElement('a');
+newNavItem1.textContent = 'Blog';
+document.querySelector('nav').prepend(newNavItem1);
+
+const newNavItem2 = document.createElement('a');
+newNavItem2.textContent = 'Projects';
+document.querySelector('nav').appendChild(newNavItem2);
+
+const navItems = document.querySelectorAll('nav a');
+navItems.forEach(item => item.style.color = 'green');
+
+document.querySelector('footer p').style.color = "red";
+document.querySelector('.contact h4').style.color = 'blue';
+
+document.querySelector('.contact p').addEventListener('mouseover', event => {
+  event.target.style.color = 'green';
+})
+document.querySelector('.contact p').addEventListener('mouseleave', event => {
+  event.target.style.color = 'black';
+})
+///end of added elements and style changes///
+
 //cta section
 document.querySelector('h1').innerHTML = 'DOM <br> IS <br> AWESOME';
 document.querySelector('button').textContent = siteContent['cta']['button'];
