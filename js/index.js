@@ -54,3 +54,30 @@ document.querySelector('h1').innerHTML = 'DOM <br> IS <br> AWESOME';
 document.querySelector('button').textContent = siteContent['cta']['button'];
 document.querySelector('#cta-img').src = siteContent['cta']['img-src'];
 
+//main content: above wide image
+document.querySelector('h4').textContent = siteContent['main-content']['features-h4'];
+document.querySelector('p').textContent = siteContent['main-content']['features-content'];
+document.querySelector('.top-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['about-h4'];
+document.querySelector('.top-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['about-content'];
+
+//image between main content
+const bannerImg = document.getElementById('middle-img');
+bannerImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//main content: below wide image
+document.querySelector('.bottom-content h4').textContent = siteContent['main-content']['services-h4'];
+document.querySelector('.bottom-content p').textContent = siteContent['main-content']['services-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) h4').textContent = siteContent['main-content']['product-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(2) p').textContent = siteContent['main-content']['product-content'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) h4').textContent = siteContent['main-content']['vision-h4'];
+document.querySelector('.bottom-content .text-content:nth-of-type(3) p').textContent = siteContent['main-content']['vision-content'];
+
+//contact section
+document.querySelector('.contact h4').textContent = siteContent['contact']['contact-h4'];
+document.querySelector('.contact p').innerHTML = '123 Way 456 Street <br> Somewhere USA';
+document.querySelector('.contact p:nth-of-type(2)').textContent = siteContent['contact']['phone'];
+document.querySelector('.contact p:nth-of-type(3)').textContent = siteContent['contact']['email'];
+
+//footer section
+document.querySelector('footer p').textContent = siteContent['footer']['copyright'];
